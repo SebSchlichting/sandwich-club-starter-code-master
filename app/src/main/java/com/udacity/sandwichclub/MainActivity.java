@@ -8,12 +8,24 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * The class describes the presentation of all available sandwiches.
+ * By selecting a sandwich, the detailed view is displayed via Intent.
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     *
+     * The Sandwich Name List is shown in the Surface
+     *
+     * @param savedInstanceState If non-null, this Activity is being re-constructed
+     *                           from a previous saved state as given here
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         String[] sandwiches = getResources().getStringArray(R.array.sandwich_names);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
@@ -30,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * The DetailActivity is called via Intent and the Intent contains the current position
+     * of the selected sandwich
+     *
+     * @param position clicked position of the current sandwich
+     */
     private void launchDetailActivity(int position) {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_POSITION, position);

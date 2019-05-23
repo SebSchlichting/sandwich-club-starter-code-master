@@ -2,75 +2,75 @@ package com.udacity.sandwichclub.model;
 
 import java.util.List;
 
+/**
+ * The class describes a sandwich over the attributes sandwich name, also known as the sandwich name,
+ * place of origin, description of the sandwich, image of the sandwich and ingredients of the sandwich.
+ */
 public class Sandwich {
+    private static final String NO_INFORMATION_AVAILABLE = "no information available";
+    private static final String COMMA_SEPARATED_LIST = ", ";
 
     private String mainName;
-    private List<String> alsoKnownAs = null;
+    private String alsoKnownAs;
     private String placeOfOrigin;
     private String description;
     private String image;
-    private List<String> ingredients = null;
+    private String ingredients;
 
     /**
-     * No args constructor for use in serialization
+     * constructor
+     *
+     * @param mainName name of the sandwich
+     * @param alsoKnownAs also known as the sandwich name
+     * @param placeOfOrigin place of origin
+     * @param description of the sandwich
+     * @param image of the sandwich
+     * @param ingredients of the sandwich
      */
-    public Sandwich() {
-    }
-
     public Sandwich(String mainName, List<String> alsoKnownAs, String placeOfOrigin, String description, String image, List<String> ingredients) {
         this.mainName = mainName;
-        this.alsoKnownAs = alsoKnownAs;
+        this.alsoKnownAs = (alsoKnownAs == null || alsoKnownAs.isEmpty()) ? NO_INFORMATION_AVAILABLE : String.join(COMMA_SEPARATED_LIST, alsoKnownAs);
         this.placeOfOrigin = placeOfOrigin;
         this.description = description;
         this.image = image;
-        this.ingredients = ingredients;
+        this.ingredients =  (ingredients == null || ingredients.isEmpty()) ? NO_INFORMATION_AVAILABLE : String.join(COMMA_SEPARATED_LIST, ingredients);
+
+
     }
 
     public String getMainName() {
         return mainName;
     }
 
-    public void setMainName(String mainName) {
-        this.mainName = mainName;
-    }
 
-    public List<String> getAlsoKnownAs() {
+
+    public String getAlsoKnownAs() {
         return alsoKnownAs;
     }
 
-    public void setAlsoKnownAs(List<String> alsoKnownAs) {
-        this.alsoKnownAs = alsoKnownAs;
-    }
+
 
     public String getPlaceOfOrigin() {
         return placeOfOrigin;
     }
 
-    public void setPlaceOfOrigin(String placeOfOrigin) {
-        this.placeOfOrigin = placeOfOrigin;
-    }
+
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+
 
     public String getImage() {
         return image;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
 
-    public List<String> getIngredients() {
+
+    public String getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<String> ingredients) {
-        this.ingredients = ingredients;
-    }
+
 }

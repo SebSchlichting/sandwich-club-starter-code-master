@@ -2,4 +2,31 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="name_of_sandwich_textsize">18sp</dimen>
+    <dimen name="name_of_sandwich_padStart">10dp</dimen>
+    <dimen name="paddingEnd">0dp</dimen>
+    <dimen name="paddingBottom1">10dp</dimen>
+    <dimen name="also_known_as_pad_bottom">0dp</dimen>
+    <dimen name="also_known_as_pad_top">2dp</dimen>
+    <dimen name="also_known_as_pad_start">5dp</dimen>
+    <dimen name="also_known_as_pad_end">0dp</dimen>
+    <dimen name="also_known_tv_margin_bottom">10dp</dimen>
+    <dimen name="also_known_tv_pad_start">10dp</dimen>
+    <dimen name="place_of_origin_pad_bottom">2dp</dimen>
+    <dimen name="place_of_origin_pad_start">5dp</dimen>
+    <dimen name="also_known_tv_text_size">12sp</dimen>
+    <dimen name="image_iv_layout_height">200dp</dimen>
+    <dimen name="origin_tv_padd_bottom">20dp</dimen>
+    <dimen name="origin_tv_padd_left">10dp</dimen>
+    <dimen name="origin_tv_padd_right">10dp</dimen>
+    <dimen name="detail_ingredients_padd_bottom">2dp</dimen>
+    <dimen name="detail_ingredients_padd_start">5dp</dimen>
+    <dimen name="ingredients_tv_padd_bottom">20dp</dimen>
+    <dimen name="ingredients_tv_padd_left">10dp</dimen>
+    <dimen name="ingredients_tv_padd_right">10dp</dimen>
+    <dimen name="detail_description_padd_bottom">2dp</dimen>
+    <dimen name="detail_description_padd_start">5dp</dimen>
+    <dimen name="description_tv_padd_bottom">20dp</dimen>
+    <dimen name="description_tv_padd_left">10dp</dimen>
+    <dimen name="description_tv_padd_right">10dp</dimen>
 </resources>
